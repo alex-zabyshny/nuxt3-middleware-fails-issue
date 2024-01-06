@@ -1,4 +1,5 @@
 export default defineNuxtRouteMiddleware(async (_to, _from) => {
+  // No need to call it on the client side due to "hydration"
   if (process.client) {
     return;
   }
